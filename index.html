@@ -1,0 +1,600 @@
+<html>
+<head>
+<title> Trimester1 Assignment  </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int rectLength;
+int rectHeight;
+int rectGap; 
+
+int count;
+int password; 
+int lock;
+
+PImage numberOne;
+PImage numberTwo;
+PImage numberThree;
+PImage numberFour;
+PImage numberFive;
+PImage numberSix;
+PImage numberSeven;
+PImage numberEight;
+PImage numberNine;
+PImage numberZero;
+PImage star;
+
+
+
+
+void setup(){
+
+	size( 1090, 613 );
+	background(255,255,255);
+	frameRate( 30 );
+	
+	rectLength = 100;
+	rectHeight = 100;
+	rectGap = 100;
+	
+	code = 0;
+	power = 1;
+	keyEntered = 0;
+	count = 0;
+	password = 0; 
+	lock = 0; 
+	
+	numberOne = loadImage("images/one.png");
+	numberTwo = loadImage("images/two.png");
+	numberThree = loadImage("images/three.png");	
+	numberFour = loadImage("images/four.png");
+	numberFive = loadImage("images/five.png");
+	numberSix = loadImage("images/six.png");
+	numberSeven = loadImage("images/seven.png");
+	numberEight = loadImage("images/eight.png");
+	numberNine = loadImage("images/nine.png");
+	numberZero = loadImage("images/zero.png");
+	enter = loadImage("images/enter.png");
+	star = loadImage("images/star.png");
+
+}
+
+
+void draw()
+{
+	background(255,255,240);
+	fill(220,200,255);
+	text(count,50,50);
+
+
+
+	//SUARES
+	//Row 1 
+	rect(rectHeight,rectLength,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength,rectHeight,rectLength);
+	
+	//Row 2 
+	rect(rectHeight,rectLength+rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+rectGap,rectHeight,rectLength);
+	
+	//Row 3
+	rect(rectHeight,rectLength+2*rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+2*rectGap,rectHeight,rectLength);
+	
+	//Row 4
+	rect(rectHeight,rectLength+3*rectGap,rectHeight,rectLength);
+	rect(rectHeight+rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	rect(rectHeight+2*rectGap,rectLength+3*rectGap,rectHeight,rectLength);
+	
+	//STARS SQUARE
+	rect(500,300,290,100);
+	
+	
+	
+	//IMAGES 
+	//NUMBERS
+	image(numberOne,100,100);
+	image(numberTwo,200,100);
+	image(numberThree,300,100);
+	image(numberFour,100,200);
+	image(numberFive,200,200);
+	image(numberSix,300,200);
+	image(numberSeven,100,300);
+	image(numberEight,200,300);
+	image(numberNine,300,300);
+	image(numberZero,200,400);
+
+	
+	//STARS image(star,490,300);image(star,560,300);image(star,630,300);image(star,700,300);
+
+
+
+
+//NUMBER_1 
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 1000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 100;
+				}
+				if (count == 3)
+				{ 
+					password = password + 10;
+				}
+				if (count == 4)
+				{ 
+					password = password + 1;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+
+//NUMBER_2 
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 100 && mouseY < 200 && mouseX > 200 && mouseX < 300)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 2000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 200;
+				}
+				if (count == 3)
+				{ 
+					password = password + 20;
+				}
+				if (count == 4)
+				{ 
+					password = password + 2;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+	
+//NUMBER_3 
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 100 && mouseY < 200 && mouseX > 300 && mouseX < 400)
+			{
+count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 3000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 300;
+				}
+				if (count == 3)
+				{ 
+					password = password + 30;
+				}
+				if (count == 4)
+				{ 
+					password = password + 3;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+
+//NUMBER_4
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 200 && mouseY < 300 && mouseX > 100 && mouseX < 200)
+			{
+count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 4000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 400;
+				}
+				if (count == 3)
+				{ 
+					password = password + 40;
+				}
+				if (count == 4)
+				{ 
+					password = password + 4;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+//NUMBER_5
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 200 && mouseY < 300 && mouseX > 200 && mouseX < 300)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 5000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 500;
+				}
+				if (count == 3)
+				{ 
+					password = password + 50;
+				}
+				if (count == 4)
+				{ 
+					password = password + 5;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+
+//NUMBER_6
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 200 && mouseY < 300 && mouseX > 300 && mouseX < 400)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 6000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 600;
+				}
+				if (count == 3)
+				{ 
+					password = password + 60;
+				}
+				if (count == 4)
+				{ 
+					password = password + 6;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+	
+	//NUMBER_7
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 300 && mouseY < 400 && mouseX > 100 && mouseX < 200)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 7000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 700;
+				}
+				if (count == 3)
+				{ 
+					password = password + 70;
+				}
+				if (count == 4)
+				{ 
+					password = password + 7;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+
+	//NUMBER_8
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 300 && mouseY < 400 && mouseX > 200 && mouseX < 300)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{
+					password = password + 8000;
+				}
+				if (count == 2)
+				{ 	
+					password = password + 800;
+				}
+				if (count == 3)
+				{ 
+					password = password + 80;
+				}
+				if (count == 4)
+				{ 
+					password = password + 8;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+
+	
+
+	//NUMBER_9
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 300 && mouseY < 400 && mouseX > 300 && mouseX < 400)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 9000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 900;
+				}
+				if (count == 3)
+				{ 
+					password = password + 90;
+				}
+				if (count == 4)
+				{ 
+					password = password + 9;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+
+	
+	
+	//NUMBER_0
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 400 && mouseY < 500 && mouseX > 200 && mouseX < 300)
+			{
+				count = count + 1;
+				lock = 0;
+				if (count == 1)
+				{ 
+					password = password + 0000;
+				}
+				if (count == 2)
+				{ 
+					password = password + 000;
+				}
+				if (count == 3)
+				{ 
+					password = password + 00;
+				}
+				if (count == 4)
+				{ 
+					password = password + 0;
+				}
+			}
+		}
+	}
+	
+	if (mousePressed == false) 
+	{
+		if (mouseY > 100 && mouseY < 200 && mouseX > 100 && mouseX < 200)
+		{
+			lock = count; 
+		}
+	}
+		
+
+	
+	if (password == 9702) 
+	{
+		link("welcome.html")
+	}
+	
+
+
+	//ENTER
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1) 
+		{
+			if (mouseY > 400 && mouseY < 500 && mouseX > 300 && mouseX < 400)
+			{
+				count = count + 1;
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false) 
+	{
+		lock = 1;
+	}
+
+
+
+	
+	
+//RESET STARS	
+	if (count == 5)
+	{ 
+		count = 0;
+		password = 0;
+	} 
+
+
+
+	
+	if (count == 1) 
+	{
+		image(star,490,300);
+	}	
+	if (count == 2)
+	{ 
+		image(star,490,300);
+		image(star,560,300);
+	}
+	if (count == 3)
+	{
+		image(star,490,300);	
+		image(star,560,300);
+		image(star,630,300);
+	}
+	if (count == 4)
+	{
+		image(star,490,300);	
+		image(star,560,300);
+		image(star,630,300);
+		image(star,700,300);
+	}
+
+
+	
+	
+	
+	
+	
+	
+}
+
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
